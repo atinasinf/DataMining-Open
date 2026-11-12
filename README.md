@@ -49,20 +49,72 @@ Một tin được tìm thấy qua nhiều từ khóa hoặc nhiều lần thu t
 
 ## 5. Cấu trúc thư mục
 
-Cấu trúc dự kiến theo bản thảo; các thư mục và tệp triển khai sẽ được bổ sung trong quá trình làm đồ án.
+Cấu trúc dưới đây là cấu trúc dự kiến của dự án. Các thư mục, tệp và đường dẫn sẽ được bổ sung, đồng bộ trong quá trình triển khai.
+
+> [!IMPORTANT]
+> **Trước mắt, nhóm tập trung xây dựng crawler và thu thập dữ liệu từ TopCV và ITviec.** Vì vậy, cây thư mục hiện chỉ liệt kê mã crawler và thư mục dữ liệu gốc của hai nguồn này.
+>
+> **VietnamWorks, CareerViet và Glints sẽ được xem xét triển khai ở giai đoạn sau.** Với mỗi nguồn, nhóm cần kiểm tra điều kiện truy cập, chạy thử crawler và kiểm tra dữ liệu thu được. Khi triển khai thành công, nhóm sẽ cập nhật cây thư mục trong README để bổ sung rõ file crawler trong `src/crawlers/` và thư mục dữ liệu tương ứng trong `data/raw/` (ví dụ `vietnamworks.py` và `data/raw/vietnamworks/`). Dữ liệu từ nguồn mới phải theo cùng schema raw và được kiểm tra trùng lặp khi ghép với các nguồn đã có.
 
 ```text
-.
-├── crawler/        # Mã nguồn thu thập dữ liệu
+DataMining-Open/
+├── README.md                      # Giới thiệu, cài đặt, cách chạy, trỏ tới docs/PLAN.md
+├── AGENTS.md                      # Luật cho Codex (không bịa, phạm vi, quy ước)
+├── requirements.txt               # Python 3.13, ghim ==
+├── .gitignore
+│
+├── docs/
+│   ├── DeBai.pdf
+│   ├── PLAN.md                    # Nguồn duy nhất cho schema raw/clean, quyết định xử lý
+│   └── WORKFLOW.md                # Thứ tự, bàn giao, bảng phân công + mốc thời gian
+│
+├── configs/                       # Mọi thứ do người viết tay, code chỉ đọc
+│   ├── keywords.json              # Từ khóa vị trí + kỹ năng dùng chung cho crawler
+│   └── skill_dictionary.csv       # skill, nhóm, các cách viết
+│
+├── src/
+│   ├── __init__.py
+│   ├── crawlers/
+│   │   ├── __init__.py
+│   │   ├── base.py                # delay ngẫu nhiên, Timestamp, ghi CSV đúng schema raw
+│   │   ├── topcv.py
+│   │   ├── itviec.py
+│   │   ├── run_crawl.py           # Điểm vào: một lệnh chạy cả crawler
+│   │   └── merge_raw.py           # Gộp file từng lần cào thành raw_data.csv
+│   └── preprocessing/
+│       ├── __init__.py
+│       ├── salary.py
+│       ├── location.py
+│       ├── experience.py          # Exp_Years, Exp_Group, Level
+│       ├── text.py
+│       ├── skills.py
+│       ├── duplicates.py
+│       └── build_clean_data.py    # Điểm vào: raw_data.csv → clean_data.csv
+│
 ├── data/
-│   ├── raw/        # Dữ liệu thô thu thập được
-│   └── clean/      # Dữ liệu đã làm sạch và chuẩn hóa
-├── notebooks/      # Các Jupyter Notebook phân tích và mô hình hóa
-├── report/         # Báo cáo đồ án
-├── slides/         # Slide thuyết trình
-├── README.md
-├── requirement.txt
-└── .gitignore
+│   ├── raw/
+│   │   ├── topcv/                 # topcv_20261113T0930.csv (mỗi lần cào một file)
+│   │   ├── itviec/
+│   │   └── raw_data.csv           # Bản gộp để nộp
+│   └── processed/
+│       └── clean_data.csv
+│
+├── notebooks/
+│   └── NhomXX_MiningPipeline.ipynb  # EDA, gom cụm, luật kết hợp, phân lớp nằm hết trong này
+│
+├── tests/
+│   ├── fixtures/                  # Vài chuỗi lương/kinh nghiệm/JD mẫu thật
+│   ├── test_salary.py
+│   ├── test_experience.py
+│   ├── test_skills.py
+│   └── test_duplicates.py
+│
+├── reports/
+│   ├── figures/
+│   └── NhomXX_BaoCao_BaiTapLon.pdf
+├── slides/
+│   └── NhomXX_Slide_BaoCao.pdf
+└── TH-01/                         # Bài thực hành cũ, giữ nguyên, không đụng
 ```
 
 ## 6. Schema dữ liệu thô (`data/raw/`)
