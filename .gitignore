@@ -1,0 +1,36 @@
+# Môi trường ảo và cache Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE và hệ điều hành
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Bí mật và xác thực
+.env
+.env.*
+!.env.example
+*.token
+cookies*.json
+
+# Cache trình duyệt và driver khi cào dữ liệu
+chromedriver*
+geckodriver*
+chrome-profile/
+.playwright/
+
+# Log và file tạm
+*.log
+tmp/
+data/tmp/
+
+# Giữ data/raw/, data/clean/ và các tệp CSV để nộp cùng đồ án.
+# Rà soát dữ liệu trước khi commit.
