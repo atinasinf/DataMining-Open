@@ -1,35 +1,23 @@
-# Python 3.13.14 | Kiểm chứng: 12/11/2026 | Windows 11 AMD64
-# Đã kiểm tra: pip check, import 14 gói và FP-Growth trên mẫu dữ liệu giả.
-# Chỉ ghim các gói trực tiếp trong bản thảo, không dùng pip freeze.
-# Cài đặt từ gốc repo: .\.venv\Scripts\python.exe -m pip install -r requirement.txt
+# Python 3.13
 
-# Thu thập dữ liệu
+# Thu thập và kiểm tra dữ liệu
+playwright==1.65.1
 requests==2.34.2
 beautifulsoup4==4.15.0
-lxml==6.1.3
-selenium==4.52.0
+jsonschema==4.26.0
 
-# Xử lý dữ liệu
-pandas==3.1.1
+# Xử lý và trực quan hóa dữ liệu
 numpy==2.5.4
-scipy==1.18.1
-
-# Trực quan hóa
+pandas==3.1.1
 matplotlib==3.11.2
 seaborn==0.13.2
 
-# Học máy và khai phá luật kết hợp
+# Gom cụm, phân lớp và luật kết hợp
 scikit-learn==1.9.1
 mlxtend==0.25.0
 
-# Notebook: dùng notebook thay cho bộ jupyter
+# Notebook
 notebook==7.6.5
 ipykernel==7.4.0
 
-# Tiện ích
-tqdm==4.70.1
-
-# Tùy chọn, chưa kiểm chứng và không cài mặc định.
-# Chỉ chọn khi cần; kiểm tra và ghim phiên bản trước khi thêm vào danh sách cài.
-# playwright
-# underthesea hoặc pyvi (chọn một thư viện tách từ tiếng Việt nếu cần)
+# Cài trình duyệt cho Playwright: python -m playwright install chromium
