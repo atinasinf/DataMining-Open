@@ -6,6 +6,10 @@ Nhóm thu thập tin tuyển dụng Data/AI từ các nền tảng việc làm t
 
 Repository đang ở giai đoạn chuẩn bị triển khai. Các nội dung ghi **chờ bổ sung** sẽ được cập nhật khi nhóm thống nhất hoặc có kết quả thực tế. Yêu cầu học thuật được đối chiếu với đề bài môn học (tệp `DeBai.pdf` sẽ được bổ sung riêng).
 
+## Workflow của nhóm
+
+![Workflow phân tích tuyển dụng Data/AI](workflow.png)
+
 ## 1. Thông tin đề tài
 
 - **Tên đề tài chính thức:** Chờ nhóm thống nhất.
