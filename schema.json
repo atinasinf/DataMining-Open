@@ -1,0 +1,31 @@
+{
+  "name": "raw_jobs_schema",
+  "version": 1,
+  "output_dir": "data/raw/",
+  "columns": [
+    {"name": "job_id", "type": "string", "required": true, "description": "Mã ổn định của tin trong nguồn; crawl lại cùng tin vẫn dùng cùng mã"},
+    {"name": "site", "type": "string", "required": true, "description": "Tên trang nguồn tuyển dụng"},
+    {"name": "URL_Goc", "type": "string", "required": true, "description": "Đường dẫn gốc của tin tuyển dụng (dùng để đối soát)"},
+    {"name": "Timestamp", "type": "datetime/string", "required": true, "description": "Thời điểm thu thập, có múi giờ (ISO 8601, ví dụ 2026-11-14T09:30:00+07:00)"},
+    {"name": "title", "type": "string", "required": true, "description": "Tiêu đề công việc"},
+    {"name": "company", "type": "string", "required": true, "description": "Tên công ty tuyển dụng"},
+    {"name": "location", "type": "string", "required": true, "description": "Địa điểm làm việc (thô)"},
+    {"name": "salary_raw", "type": "string", "required": true, "description": "Mức lương nguyên bản"},
+    {"name": "experience_raw", "type": "string", "required": true, "description": "Yêu cầu kinh nghiệm nguyên bản"},
+    {"name": "description", "type": "string", "required": true, "description": "Mô tả công việc"},
+    {"name": "requirements", "type": "string", "required": true, "description": "Yêu cầu ứng viên"},
+    {"name": "benefits", "type": "string", "required": true, "description": "Phúc lợi"},
+    {"name": "skills_raw", "type": "string", "required": false, "description": "Danh sách kỹ năng thô (nếu trang có thẻ riêng)"},
+    {"name": "work_model_raw", "type": "string", "required": false, "description": "Hình thức làm việc thô (Onsite / Hybrid / Remote)"},
+    {"name": "employment_type_raw", "type": "string", "required": false, "description": "Loại hình hợp đồng (Full-time / Part-time / Intern...)"},
+    {"name": "posted_at_raw", "type": "string", "required": false, "description": "Ngày đăng tin nguyên bản"},
+    {"name": "keyword_search", "type": "string/list", "required": false, "description": "Từ khóa đã dùng để tìm thấy tin; một tin có thể ứng với nhiều từ khóa (trong CSV nối bằng ' | ')"}
+  ],
+  "rules": [
+    "Cột đánh dấu required=true bắt buộc có mặt trong file; giá trị nội dung có thể để trống khi nguồn không công bố.",
+    "Không tự điền giá trị không có trong nguồn.",
+    "Nếu nguồn gộp mô tả, yêu cầu và phúc lợi, giữ nguyên khối văn bản gốc; không tự tạo nội dung cho các phần không tách được.",
+    "Lưu dữ liệu thô riêng theo từng lần thu thập.",
+    "Các lần tìm thấy cùng một tin không được tính thành nhiều tin (quy tắc dedup chính thức do nhóm thống nhất sau khi kiểm tra mẫu nguồn)."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "site": "itviec",
+  "keywords": [
+    "Data Analyst",
+    "Data Scientist",
+    "Data Engineer",
+    "Machine Learning",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Business Intelligence",
+    "AI Engineer"
+  ],
+  "started_at": "2026-11-14T10:52:59+07:00",
+  "finished_at": "2026-11-14T15:55:17+07:00",
+  "total_jobs": 229,
+  "empty_required": {
+    "job_id": 0,
+    "site": 0,
+    "URL_Goc": 0,
+    "Timestamp": 0,
+    "title": 0,
+    "company": 0,
+    "location": 0,
+    "salary_raw": 0,
+    "experience_raw": 229,
+    "description": 7,
+    "requirements": 7,
+    "benefits": 7
+  },
+  "args": {
+    "keywords": [
+      "Data Analyst",
+      "Data Scientist",
+      "Data Engineer",
+      "Machine Learning",
+      "Power BI",
+      "Python",
+      "SQL",
+      "Business Intelligence",
+      "AI Engineer"
+    ],
+    "pages": 34,
+    "limit": 0,
+    "headless": false,
+    "out_root": "data/raw",
+    "min_delay": 2.0,
+    "max_delay": 5.0
+  }
+}
