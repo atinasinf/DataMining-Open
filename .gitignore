@@ -34,3 +34,7 @@ data/tmp/
 
 # Giữ data/raw/, data/clean/ và các tệp CSV để nộp cùng đồ án.
 # Rà soát dữ liệu trước khi commit.
+
+# TopCV scraper - dữ liệu cá nhân và debug
+.topcv_profile/
+debug_topcv/
