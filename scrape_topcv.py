@@ -48,13 +48,16 @@ SITE = "topcv"
 BASE = "https://www.topcv.vn"
 SEARCH_URL = BASE + "/tim-viec-lam-{slug}?type_keyword=1&page={page}&sba=1"
 
-# 5 từ khóa: vị trí + kỹ năng cốt lõi, mảng Data Science / Data Analytics
+# từ khóa: vị trí + kỹ năng cốt lõi, mảng Data Science / Data Analytics
 KEYWORDS = [
     "Data Analyst",
     "Data Scientist",
     "Machine Learning",
     "Data Engineer",
-    "Power BI",
+    "AI Engineer",
+    "Deep Learning Engineer",
+    "Database",
+    "Business Analyst"
 ]
 
 SECTION_MAP = {  # từ khóa trong tiêu đề mục -> trường schema
