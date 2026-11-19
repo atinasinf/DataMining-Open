@@ -48,16 +48,20 @@ SITE = "topcv"
 BASE = "https://www.topcv.vn"
 SEARCH_URL = BASE + "/tim-viec-lam-{slug}?type_keyword=1&page={page}&sba=1"
 
-# từ khóa: vị trí + kỹ năng cốt lõi, mảng Data Science / Data Analytics
+# Từ khóa vị trí và kỹ năng cốt lõi, mảng Data Science / Data Analytics
 KEYWORDS = [
-    "Data Analyst",
-    "Data Scientist",
-    "Machine Learning",
-    "Data Engineer",
+    # Vị trí
+    "Business Analyst",
     "AI Engineer",
-    "Deep Learning Engineer",
-    "Database",
-    "Business Analyst"
+    "Data Analyst",
+    "Data Engineer",
+    "Data Scientist",
+    # Kỹ năng
+    "SQL",
+    "Python",
+    "Power BI",
+    "Tableau",
+    "Machine Learning",
 ]
 
 SECTION_MAP = {  # từ khóa trong tiêu đề mục -> trường schema
@@ -450,8 +454,8 @@ def main() -> None:
     p.add_argument("--out", default="raw_topcv.csv")
     p.add_argument("--headless", action="store_true")
     p.add_argument("--profile", default=".topcv_profile", help="Thư mục profile trình duyệt (giữ cookie giữa các lần chạy)")
-    p.add_argument("--min-delay", type=float, default=3.0)
-    p.add_argument("--max-delay", type=float, default=7.0)
+    p.add_argument("--min-delay", type=float, default=6.0)
+    p.add_argument("--max-delay", type=float, default=12.0)
     p.add_argument("--checkpoint", type=int, default=20, help="Lưu tạm sau mỗi N tin")
     p.add_argument("--resume", action="store_true", help="Tiếp tục từ file --out đã có")
     args = p.parse_args()
@@ -466,3 +470,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
