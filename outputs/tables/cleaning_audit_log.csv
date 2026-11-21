@@ -1,0 +1,6 @@
+﻿Bước,Số dòng đầu vào,Số dòng bị loại,Số dòng còn lại,Tỷ lệ giữ lại (%),Mô tả / Lý do xử lý
+0. Dữ liệu thô ban đầu (raw_jobs_data.csv),1473,0,1473,100.0,"Tổng số bản ghi thu thập từ CareerViet (755), TopCV (414), VietnamWorks (304)"
+1. Loại cụm lỗi search TopCV (keyword_search = 'Tableau'),1473,91,1382,93.82,"Cơ chế search từ khóa 'Tableau' trên TopCV trả về 90/91 tin ngoài ngành (giáo viên, bác sĩ, kế toán...)"
+2. Lọc tin lạc ngành (Tiêu đề + Từ điển kỹ năng),1382,196,1186,80.52,"Loại tin kế toán, y tế, cơ khí, marketing, sales, phân tích đầu tư và tin không chứa kỹ năng chuyên môn"
+3A. Khử trùng lặp khóa kỹ thuật (job_id / URL_Goc),1186,0,1186,80.52,Kiểm tra trùng mã tin và đường dẫn gốc từ crawler
+"3B. Khử trùng lặp đa nguồn theo cặp (title, company)",1186,27,1159,78.68,"Loại tin đăng lặp lại hoặc đăng chéo giữa 3 sàn; ưu tiên giữ bản ghi đủ lương, kinh nghiệm và JD dài nhất"

@@ -1,0 +1,74 @@
+﻿category,skill_name,column_name,case_sensitive,regex_pattern,notes
+lang,SQL,skill_lang_sql,0,(?<!no)\b(?:sql|t-sql|pl/sql|plsql|tsql)\b,"Bao gồm SQL, T-SQL, PL/SQL; dùng (?<!no) để không đếm nhầm NoSQL"
+lang,Python,skill_lang_python,0,\bpython\b,Ngôn ngữ lập trình cốt lõi cho Data/AI
+lang,Java,skill_lang_java,0,\bjava\b(?!\s*script),Dùng (?!\s*script) để tránh khớp nhầm JavaScript
+lang,JavaScript / TypeScript,skill_lang_javascript_ts,0,\b(?:javascript|typescript|ecmascript)\b|(?<!\.)\bjs\b,Gộp JS/TS; bỏ từ ngắn 'ts' vì trùng ký hiệu tài liệu FS/TS trong JD BA
+lang,R,skill_lang_r,0,"(?:\br\s*(?:programming|studio|language)\b|\brstudio\b|\b(?:python|sql|sas|matlab|spss|stata|scala|tableau|excel)\s*[,/&]\s*r\b|\br\s*[,/&]\s*(?:python|sql|sas|matlab|spss|stata|scala|tableau|excel)\b)","Kiểm soát ngữ cảnh lân cận để chỉ bắt ngôn ngữ R, tránh khớp nhầm ký tự R đứng lẻ"
+lang,C#,skill_lang_csharp,0,(?<![a-z0-9])c#(?![a-z0-9]),Dùng ranh giới ký tự chữ-số vì dấu # không phải ký tự từ (\w)
+lang,C++,skill_lang_cpp,0,(?<![a-z0-9])c\+\+(?![a-z0-9]),Dùng ranh giới ký tự chữ-số vì dấu ++ không phải ký tự từ (\w)
+lang,VBA,skill_lang_vba,0,\bvba\b,Ngôn ngữ tự động hóa Excel/Office phổ biến ở mảng DA/BA
+framework,Apache Kafka,skill_framework_kafka,0,\bkafka\b,Nền tảng streaming dữ liệu cho Data Engineer
+framework,PyTorch,skill_framework_pytorch,0,\bpytorch\b,Framework Deep Learning/AI phổ biến nhất
+framework,Apache Spark,skill_framework_spark,0,\b(?:apache\s+spark|pyspark|spark)\b,Gộp Apache Spark và PySpark cho xử lý Big Data
+framework,.NET / ASP.NET,skill_framework_dotnet,0,(?<![a-z0-9])(?:\.net|asp\.net|dotnet)\b,Hệ sinh thái .NET / ASP.NET
+framework,Python Web (FastAPI/Flask/Django),skill_framework_python_web,0,\b(?:fastapi|flask|django)\b,Gộp 3 web/API framework Python triển khai dịch vụ AI/Data
+framework,React / Node.js,skill_framework_react_node,0,\b(?:react(?:js|\.js)?|node(?:\.?js))\b,Gộp React và Node.js cho ứng dụng web/AI product
+framework,TensorFlow / Keras,skill_framework_tensorflow,0,\b(?:tensorflow|keras)\b,Gộp TensorFlow và Keras
+framework,Apache Airflow,skill_framework_airflow,0,\bairflow\b,Công cụ điều phối pipeline dữ liệu (workflow orchestration)
+framework,Python DS (Pandas/NumPy/Sklearn),skill_framework_python_ds,0,\b(?:pandas|numpy|scikit-learn|sklearn)\b,Bộ thư viện khoa học dữ liệu nền tảng trên Python
+framework,LLM Stack (LangChain/HuggingFace),skill_framework_llm_stack,0,\b(?:langchain|llamaindex|langgraph|hugging\s*face|huggingface|transformers)\b,Bộ framework & hệ sinh thái xây dựng ứng dụng LLM/RAG/AI Agent
+tool,Excel,skill_tool_excel,0,\b(?:ms\s*excel|microsoft\s*excel|excel)\b,Công cụ bảng tính cốt lõi cho DA/BA
+tool,Power BI,skill_tool_power_bi,0,\b(?:power\s*bi|powerbi)\b,Gộp Power BI và PowerBI
+tool,ERP / SAP / Odoo,skill_tool_erp_sap,0,\b(?:erp|sap|odoo)\b,Hệ thống quản trị doanh nghiệp đặc thù của nhóm BA/ERP
+tool,CRM / Salesforce,skill_tool_crm,0,\b(?:crm|salesforce|hubspot)\b,Hệ thống quản trị khách hàng thường gặp ở BA/DA thương mại
+tool,Power Query / Power Platform,skill_tool_power_platform,0,\bpower\s*(?:query|automate|apps|platform)\b,Hệ sinh thái ETL & tự động hóa low-code của Microsoft
+tool,Tableau,skill_tool_tableau,0,\btableau\b,Nền tảng BI và trực quan hóa dữ liệu
+tool,Jira,skill_tool_jira,0,\bjira\b,Công cụ quản lý backlog/sprint phổ biến ở BA/Product/Tech
+tool,BPMN / UML,skill_tool_bpmn_uml,0,\b(?:bpmn|uml)\b,Chuẩn mô hình hóa quy trình và hệ thống đặc thù của BA
+tool,Confluence,skill_tool_confluence,0,\bconfluence\b,Công cụ quản trị tài liệu đặc tả yêu cầu đi cặp với Jira
+tool,Figma,skill_tool_figma,0,\bfigma\b,Công cụ thiết kế giao diện/wireframe/prototype của BA
+tool,Looker / Looker Studio,skill_tool_looker,0,\b(?:looker(?:\s*studio)?|google\s*data\s*studio|data\s*studio)\b,"Gộp Looker, Looker Studio và tên cũ Google Data Studio"
+tool,Diagramming (Draw.io/Visio/Miro),skill_tool_diagramming,0,\b(?:draw\.io|visio|lucidchart|miro|balsamiq|axure)\b,Nhóm công cụ vẽ lưu đồ quy trình và mockup cho BA
+cloud,Git / GitHub / GitLab,skill_cloud_git,0,\b(?:git|github|gitlab|bitbucket)\b,Quản lý mã nguồn (Version Control)
+cloud,AWS,skill_cloud_aws,0,\b(?:aws|amazon\s*web\s*services)\b,Nền tảng đám mây Amazon Web Services
+cloud,CI/CD,skill_cloud_cicd,0,\b(?:ci/cd|cicd|jenkins|github\s*actions)\b,Tích hợp và triển khai liên tục
+cloud,Azure,skill_cloud_azure,0,\bazure\b,Nền tảng đám mây Microsoft Azure
+cloud,Docker,skill_cloud_docker,0,\bdocker\b,Đóng gói ứng dụng dạng container
+cloud,Linux / Unix,skill_cloud_linux,0,\b(?:linux|ubuntu|unix)\b,Hệ điều hành máy chủ triển khai dịch vụ Data/AI
+cloud,Kubernetes,skill_cloud_kubernetes,0,\b(?:kubernetes|k8s)\b,Điều phối container trên production
+cloud,GCP (Google Cloud),skill_cloud_gcp,0,\b(?:gcp|google\s*cloud)\b,Nền tảng đám mây Google Cloud Platform
+cloud,MLOps / MLflow,skill_cloud_mlops,0,\b(?:mlops|mlflow|kubeflow)\b,Vận hành vòng đời mô hình Machine Learning
+db,Oracle,skill_db_oracle,0,\boracle\b,Hệ quản trị CSDL doanh nghiệp phổ biến ở Ngân hàng/Tài chính
+db,Data Warehouse (DWH),skill_db_data_warehouse,0,\b(?:data\s*warehouse|dwh|kho\s*dữ\s*liệu)\b,Kho dữ liệu tập trung song ngữ Anh-Việt
+db,SQL Server (MSSQL),skill_db_sql_server,0,\b(?:sql\s*server|mssql|ms\s*sql)\b,Microsoft SQL Server
+db,PostgreSQL,skill_db_postgresql,0,\b(?:postgresql|postgres)\b,Hệ quản trị CSDL quan hệ mã nguồn mở
+db,Data Lake / Lakehouse,skill_db_data_lake,0,\b(?:data\s*lake|lakehouse)\b,Kiến trúc lưu trữ dữ liệu thô quy mô lớn
+db,MySQL,skill_db_mysql,0,\bmysql\b,Hệ quản trị CSDL quan hệ MySQL
+db,MongoDB,skill_db_mongodb,0,\bmongodb\b,CSDL NoSQL dạng tài liệu (document store)
+db,Redis,skill_db_redis,0,\bredis\b,CSDL in-memory / caching
+db,Cloud DWH (BigQuery/Snowflake/Redshift),skill_db_cloud_dwh,0,\b(?:bigquery|snowflake|redshift|clickhouse)\b,Gộp các kho dữ liệu phân tích hiện đại trên Cloud/OLAP
+db,Vector DB,skill_db_vector_db,0,\b(?:vector\s*(?:db|database)|milvus|pinecone|qdrant|chroma|faiss|pgvector|weaviate)\b,CSDL vector chuyên dụng cho bài toán RAG/LLM/AI
+domain,Artificial Intelligence (AI),skill_domain_ai,1,\bAI\b|Artificial Intelligence|artificial intelligence|Trí tuệ nhân tạo|trí tuệ nhân tạo,"BẮT BUỘC case_sensitive=1 để chỉ bắt 'AI' viết hoa, loại 29 tin khớp nhầm chữ 'ai' tiếng Việt"
+domain,Testing / UAT,skill_domain_testing_uat,0,\b(?:uat|test\s*case|kiểm\s*thử)\b,Kiểm thử chấp nhận người dùng (UAT) & kiểm thử hệ thống trong quy trình BA/Tech
+domain,API / RESTful API,skill_domain_api,0,\b(?:rest(?:ful)?\s*api|api|graphql|microservice)\b,"Thiết kế, đặc tả và tích hợp giao diện lập trình ứng dụng"
+domain,Data Visualization / Dashboard,skill_domain_visualization,0,\b(?:data\s*visualization|trực\s*quan\s*hóa|dashboard)\b,Trực quan hóa dữ liệu và xây dựng báo cáo quản trị
+domain,Machine Learning,skill_domain_machine_learning,0,\b(?:machine\s*learning|học\s*máy)\b,Học máy song ngữ Anh-Việt
+domain,Data Governance / Quality,skill_domain_data_governance,0,\b(?:data\s*governance|data\s*quality|quản\s*trị\s*dữ\s*liệu|chất\s*lượng\s*dữ\s*liệu)\b,Quản trị và kiểm soát chất lượng dữ liệu
+domain,LLM / GenAI / RAG / Agent,skill_domain_llm_genai,0,\b(?:llms?|large\s*language\s*models?|rag|retrieval[\s-]augmented|gen\s*ai|generative\s*ai|prompt\s*engineering|ai\s*agents?|agentic)\b,"Nhóm kỹ thuật AI tạo sinh, LLM, RAG và AI Agent"
+domain,BA Documentation (BRD/SRS/User Story),skill_domain_ba_docs,0,\b(?:brd|srs|frs|urd|user\s*stor(?:y|ies)|use\s*case)\b,Kỹ năng viết tài liệu đặc tả nghiệp vụ cốt lõi của Business Analyst
+domain,Statistics / A/B Testing,skill_domain_statistics,0,\b(?:statistics|statistical|thống\s*kê|a/b\s*test(?:ing)?|xác\s*suất)\b,Nền tảng xác suất thống kê và thực nghiệm dữ liệu
+domain,ETL / Data Pipeline,skill_domain_etl_pipeline,0,\b(?:etl|elt|data\s*pipeline|pipeline\s*dữ\s*liệu)\b,"Xây dựng luồng trích xuất, biến đổi và nạp dữ liệu"
+domain,Data Modeling,skill_domain_data_modeling,0,\b(?:data\s*model(?:ing|ling)?|mô\s*hình\s*(?:hóa\s*)?dữ\s*liệu|erd)\b,Thiết kế mô hình dữ liệu và lược đồ thực thể ERD
+domain,Agile / Scrum,skill_domain_agile_scrum,0,\b(?:agile|scrum|kanban)\b,Phương pháp phát triển phần mềm linh hoạt
+domain,UI/UX / Wireframe,skill_domain_ui_ux,0,\b(?:ui/ux|ux/ui|wireframe|mockup|prototype)\b,Thiết kế luồng trải nghiệm và phác thảo giao diện của BA
+domain,Big Data,skill_domain_big_data,0,\b(?:big\s*data|dữ\s*liệu\s*lớn)\b,Xử lý và kiến trúc dữ liệu lớn
+domain,Computer Vision,skill_domain_computer_vision,0,\b(?:computer\s*vision|thị\s*giác\s*máy\s*tính|ocr|object\s*detection|yolo)\b,"Thị giác máy tính, nhận dạng ảnh và OCR"
+domain,Deep Learning / NLP,skill_domain_deep_learning_nlp,0,\b(?:deep\s*learning|học\s*sâu|nlp|natural\s*language\s*processing|xử\s*lý\s*ngôn\s*ngữ\s*tự\s*nhiên)\b,Học sâu và xử lý ngôn ngữ tự nhiên
+soft,Tiếng Anh (English),skill_soft_english,0,\b(?:tiếng\s*anh|english|ielts|toeic)\b,Yêu cầu ngoại ngữ tiếng Anh (gồm IELTS/TOEIC)
+soft,Giao tiếp (Communication),skill_soft_communication,0,\b(?:giao\s*tiếp|communication)\b,Kỹ năng giao tiếp với đội nhóm và các bên liên quan
+soft,Chủ động / Tự học,skill_soft_proactive,0,\b(?:chủ\s*động|tự\s*học|proactive|self[\s-]learning|học\s*hỏi\s*nhanh)\b,Tinh thần chủ động và khả năng tự cập nhật công nghệ
+soft,Tư duy phân tích / Logic,skill_soft_analytical_thinking,0,\b(?:tư\s*duy\s*(?:phân\s*tích|logic|phản\s*biện|hệ\s*thống)|analytical\s*(?:thinking|skills?)|critical\s*thinking|logical\s*thinking)\b,"Tư duy phân tích, logic và phản biện"
+soft,Giải quyết vấn đề,skill_soft_problem_solving,0,\b(?:giải\s*quyết\s*vấn\s*đề|problem[\s-]solving)\b,Kỹ năng phân tích và giải quyết vấn đề
+soft,Làm việc nhóm (Teamwork),skill_soft_teamwork,0,\b(?:làm\s*việc\s*nhóm|teamwork|team\s*work|phối\s*hợp\s*nhóm)\b,Kỹ năng phối hợp làm việc nhóm
+soft,Thuyết trình (Presentation),skill_soft_presentation,0,\b(?:thuyết\s*trình|presentation|storytelling)\b,Kỹ năng thuyết trình và kể chuyện bằng dữ liệu
+soft,Quản lý dự án (Project Mgmt),skill_soft_project_mgmt,0,\b(?:quản\s*lý\s*dự\s*án|project\s*management|pmp)\b,Kỹ năng quản lý dự án và chứng chỉ PMP

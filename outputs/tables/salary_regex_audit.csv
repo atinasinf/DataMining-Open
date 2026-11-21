@@ -1,0 +1,17 @@
+﻿site,salary_raw,Luong_Min,Luong_Max,Luong_Mid,salary_status,Salary_Bracket
+careerviet,Lương: 1.000 - 1.500 USD,25.65,38.47,32.06,range,Tren_30M
+careerviet,Lương: 40 - 50 Triệu VND,40.0,50.0,45.0,range,Tren_30M
+careerviet,Lương: Lên đến 40 Triệu VND,,40.0,,single_bound,
+careerviet,Cạnh tranh,,,,negotiable,
+careerviet,,,,,missing,
+topcv,"750 - 1,500 USD",19.23,38.47,28.85,range,15M_30M
+topcv,"500 - 2,000 USD",12.82,51.29,32.05,range,Tren_30M
+topcv,"Tới 2,500 USD",,64.11,,single_bound,
+topcv,Tới 60 triệu,,60.0,,single_bound,
+topcv,Thoả thuận,,,,negotiable,
+vietnamworks,"$ 700-1,500 /tháng",17.95,38.47,28.21,range,15M_30M
+vietnamworks,"$ 1,000-1,500 /tháng",25.65,38.47,32.06,range,Tren_30M
+vietnamworks,"Tới $ 2,200 /tháng",,56.42,,single_bound,
+vietnamworks,Tới 18tr ₫/tháng,,18.0,,single_bound,
+vietnamworks,Thương lượng,,,,negotiable,
+vietnamworks,$ 1-1 /tháng,,,,missing,
